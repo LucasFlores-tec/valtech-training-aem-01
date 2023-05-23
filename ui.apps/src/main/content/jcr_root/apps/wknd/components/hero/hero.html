@@ -1,0 +1,17 @@
+<!--/* hero.html */-->
+
+<div data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HeroModel"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${!model.empty}"
+     class="cmp-hero">
+
+    <div class="cmp-hero__image"
+         data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }">
+    </div>
+
+    <h2 class="cmp-hero__title">${model.title}</h2>
+
+    <textarea class="cmp-hero__description">${model.description}</textarea>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

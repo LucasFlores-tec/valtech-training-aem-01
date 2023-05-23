@@ -1,0 +1,34 @@
+<!--/* hero.html */-->
+<div data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HeroModel"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
+     data-sly-test.hasContent="${!model.empty}"
+     class="cmp-model">
+
+    <div class="cmp-model-title">
+        <h2 class="cmp-model-title__title">${model.title}</h2>
+    </div>
+
+    <div class="cmp-model-data">
+        <div class="cmp-model-data-data">
+            <div class="cmp-model-data-data-description">
+                <p class="cmp-model-data-data-description__description">${model.description}</p>
+            </div>
+            <div class="cmp-model-data-data__button">
+                <a href="${model.linkURL}">
+                    <button type="button" class="cmp-model-data-data__button__button">
+                        <span>Read More </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="cmp-model-data__image"
+             data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }">
+        </div>
+    </div>
+
+</div>
+
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
