@@ -21,7 +21,7 @@ public interface HeroModel {
     String getLinkURL();
 
     /**
-     * @return true if any of the demanded fields is empty.
+     * @return the image's path reference.
      */
-    boolean isEmpty();
+    String getImageReference();
 }

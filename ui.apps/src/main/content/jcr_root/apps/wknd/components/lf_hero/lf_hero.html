@@ -1,34 +1,35 @@
 <!--/* hero.html */-->
 <div data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HeroModel"
-     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
-     data-sly-test.hasContent="${!model.empty}"
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
      class="cmp-model">
 
+    <!--/* Hero's title */-->
     <div class="cmp-model-title">
         <h2 class="cmp-model-title__title">${model.title}</h2>
     </div>
 
     <div class="cmp-model-data">
-        <div class="cmp-model-data-data">
-            <div class="cmp-model-data-data-description">
-                <p class="cmp-model-data-data-description__description">${model.description}</p>
+
+        <div class="cmp-model-data__">
+            <!--/* Hero's description */-->
+            <div class="cmp-model-data__description">
+                <p class="cmp-model-data__description--desc">${model.description}</p>
             </div>
-            <div class="cmp-model-data-data__button">
-                <a href="${model.linkURL}">
-                    <button type="button" class="cmp-model-data-data__button__button">
-                        <span>Read More </span>
-                    </button>
-                </a>
+            <!--/* Hero's button */-->
+            <div class="cmp-model-data__button">
+                <button type="button" class="cmp-model-data__button--btn" data-sly-include="button.html">
+                    <span class="cmp-model-data__button--btn__text" data-sly-test="${button.title}">${button.title} </span>
+                </button>
             </div>
         </div>
-        <div class="cmp-model-data__image"
-             data-sly-resource="${ '.' @ resourceType = 'core/wcm/components/image/v2/image' }">
+
+        <!--/* Hero's image */-->
+        <div class="cmp-model-data__image">
+            <a href="${model.linkURL}">
+                <img class="cmp-model-data__image--img" src="${model.imageReference}"/>
+            </a>
         </div>
     </div>
 
 </div>
-
-</div>
-<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
-

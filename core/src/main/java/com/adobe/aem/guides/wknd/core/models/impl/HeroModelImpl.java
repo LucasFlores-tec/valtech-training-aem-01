@@ -1,7 +1,6 @@
 package com.adobe.aem.guides.wknd.core.models.impl;
 
 import com.adobe.aem.guides.wknd.core.models.HeroModel;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
@@ -27,7 +26,7 @@ public class HeroModelImpl implements HeroModel {
     private String linkURL;
 
     @ValueMapValue
-    private String fileReference;
+    private String imageReference;
 
     @Override
     public String getTitle() {
@@ -40,17 +39,12 @@ public class HeroModelImpl implements HeroModel {
     }
 
     @Override
-    public String getLinkURL() { return linkURL; }
+    public String getLinkURL() {
+        return linkURL;
+    }
 
     @Override
-    public boolean isEmpty() {
-        if(StringUtils.isEmpty(title)
-                || StringUtils.isEmpty(description)
-                || StringUtils.isEmpty(linkURL)
-                || StringUtils.isEmpty(fileReference)) {
-            return true;
-        } else {
-            return false;
-        }
+    public String getImageReference() {
+        return imageReference;
     }
 }
