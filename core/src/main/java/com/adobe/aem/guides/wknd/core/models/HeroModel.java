@@ -24,4 +24,6 @@ public interface HeroModel {
      * @return the image's path reference.
      */
     String getImageReference();
+
+    String getType();
 }

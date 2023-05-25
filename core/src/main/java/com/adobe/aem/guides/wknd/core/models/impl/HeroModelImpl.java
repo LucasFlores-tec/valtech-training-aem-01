@@ -13,7 +13,6 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
 public class HeroModelImpl implements HeroModel {
-
     protected static final String RESOURCE_TYPE = "apps/wknd/components/lf_hero";
 
     @ValueMapValue
@@ -27,6 +26,9 @@ public class HeroModelImpl implements HeroModel {
 
     @ValueMapValue
     private String imageReference;
+
+    @ValueMapValue
+    private String type;
 
     @Override
     public String getTitle() {
@@ -46,5 +48,10 @@ public class HeroModelImpl implements HeroModel {
     @Override
     public String getImageReference() {
         return imageReference;
+    }
+
+    @Override
+    public String getType() {
+        return type;
     }
 }

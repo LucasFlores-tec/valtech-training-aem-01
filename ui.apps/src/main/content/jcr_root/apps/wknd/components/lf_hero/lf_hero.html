@@ -5,29 +5,27 @@
      class="cmp-model">
 
     <!--/* Hero's title */-->
-    <div class="cmp-model-title">
-        <h2 class="cmp-model-title__title">${model.title}</h2>
-    </div>
+    <h1 class="cmp-model-title" data-sly-element="${model.type}">${model.title}</h1>
 
     <div class="cmp-model-data">
 
-        <div class="cmp-model-data__">
-            <!--/* Hero's description */-->
-            <div class="cmp-model-data__description">
-                <p class="cmp-model-data__description--desc">${model.description}</p>
+        <!--/* Hero's description and button */-->
+        <div class="cmp-model-data__des-btn">
+            <div class="cmp-model-data__des">
+                <p class="cmp-model-data__des--description">${model.description}</p>
             </div>
-            <!--/* Hero's button */-->
-            <div class="cmp-model-data__button">
-                <button type="button" class="cmp-model-data__button--btn" data-sly-include="button.html">
-                    <span class="cmp-model-data__button--btn__text" data-sly-test="${button.title}">${button.title} </span>
+
+            <div class="cmp-model-data__btn">
+                <button type="button" class="cmp-model-data__btn--button" data-sly-include="button.html">
+                    <span class="cmp-model-data__btn--button__text" data-sly-test="${button.title}">${button.title} </span>
                 </button>
             </div>
         </div>
 
         <!--/* Hero's image */-->
-        <div class="cmp-model-data__image">
+        <div class="cmp-model-data__img">
             <a href="${model.linkURL}">
-                <img class="cmp-model-data__image--img" src="${model.imageReference}"/>
+                <img class="cmp-model-data__img--image" src="${model.imageReference}"/>
             </a>
         </div>
     </div>

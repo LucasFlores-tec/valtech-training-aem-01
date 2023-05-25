@@ -1,72 +1,57 @@
 /* Default lf_hero component basic Styles */
 .cmp-model {
-    display: flex;
+    display: grid;
     width: auto;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
+    height: 500px;
 
     .cmp-model-title {
-        width: 100%;
-        height: 70px;
-        display: flex;
+        font-family: $font-family-serif;
         margin: auto;
-
-        .cmp-model-title__title {
-            font-size: $font-size-medium;
-            font-family: $font-family-serif;
-            margin: auto;
-        }
+        text-align: center;
     }
 
     .cmp-model-data {
-        width: 100%;
-        height:330px;
-        display: flex;
-        margin-top: 20px;
-        align-items: flex-start;
-        margin-left: 100px;
-        margin-right: 100px;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 50px;
+        height: 400px;
 
-        .cmp-model-data__ {
-            width: 50%;
-            height: 330px;
-            display: block;
+        .cmp-model-data__des-btn {
+            width: 100%;
+            height: 400px;
+            display: grid;
+            align-content: center;
 
-            .cmp-model-data__description {
+            .cmp-model-data__des {
                 width: 100%;
-                height: 190px;
-                margin-bottom: 20px;
+                height: 250px;
+                display: grid;
+                justify-items: center;
+                align-content: center;
 
-                .cmp-model-data__description--desc {
+                .cmp-model-data__des--description {
                     color: $gray;
                     font-size: 18px;
-                    width: 100%;
+                    width: 90%;
                     height: 100%;
-                    margin: 0 0 9pt;
                     line-height: 2;
-                    display: flex;
-                    align-items: flex-start;
-                    text-align: justify;
                 }
             }
 
-            .cmp-model-data__button {
-                height: 100px;
-                display: flex;
-                justify-content: center;
+            .cmp-model-data__btn {
+                width: 100%;
+                height: 50px;
+                display: grid;
+                justify-items: center;
 
-                .cmp-model-data__button--btn {
+                .cmp-model-data__btn--button {
                     width: 180px;
                     height: 50px;
                     border-radius: 10px;
+                    margin-left: 50px;
+                    font-size: 20px;
                     border: none;
-                    background-color: darkgray;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 18px;
-                    transition: all 0.5s;
+                    background-color: $gray;
                     cursor: pointer;
 
                     .cmp-button__text {
@@ -76,19 +61,19 @@
             }
         }
 
-        .cmp-model-data__image {
-            width: 50%;
-            height: 310px;
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: flex-end;
+        .cmp-model-data__img {
+            width: 100%;
+            height: 400px;
+            display: grid;
+            justify-content: end;
+            align-items: center;
 
             /* This class targets a Core Component Image CSS class */
-            .cmp-model-data__image--img {
-                width: 100%;
-                height: 310px;
+            .cmp-model-data__img--image {
+                width: 500px;
+                height: 400px;
+                margin-right: 50px;
                 object-fit: cover;
-                margin: auto;
             }
         }
     }
@@ -98,74 +83,58 @@
 .cmp-image--switchside {
 
     .cmp-model {
-        display: flex;
+        display: grid;
         width: auto;
-        height: 400px;
-        display: flex;
-        flex-wrap: wrap;
+        height: 500px;
 
         .cmp-model-title {
-            width: 100%;
-            height: 70px;
-            display: flex;
+            font-family: $font-family-serif;
             margin: auto;
-
-            .cmp-model-title__title {
-                font-size: $font-size-medium;
-                font-family: $font-family-serif;
-                margin: auto;
-            }
+            text-align: center;
         }
 
         .cmp-model-data {
-            width: 100%;
-            height:330px;
-            display: flex;
-            margin-top: 20px;
-            align-items: flex-start;
-            margin-left: 100px;
-            margin-right: 100px;
-            flex-direction: row-reverse;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 50px;
+            height: 400px;
 
-            .cmp-model-data__ {
-                width: 50%;
-                height: 330px;
-                display: block;
+            .cmp-model-data__des-btn {
+                width: 100%;
+                height: 400px;
+                display: grid;
+                grid-column-start: 2;
+                grid-row-start: 1;
 
-                .cmp-model-data__description {
+                .cmp-model-data__des {
                     width: 100%;
-                    height: 190px;
-                    margin-bottom: 20px;
+                    height: 250px;
+                    display: grid;
+                    justify-items: center;
+                    align-content: center;
 
-                    .cmp-model-data__description--desc {
+                    .cmp-model-data__des--description {
                         color: $gray;
                         font-size: 18px;
-                        width: 100%;
-                        height: 100%;
-                        margin: 0 0 9pt;
+                        width: 90%;
+                        height: auto;
                         line-height: 2;
-                        display: flex;
-                        align-items: flex-start;
-                        text-align: justify;
                     }
                 }
 
-                .cmp-model-data__button {
-                    height: 100px;
-                    display: flex;
-                    justify-content: center;
+                .cmp-model-data__btn {
+                    width: 100%;
+                    height: 50px;
+                    display: grid;
+                    justify-items: center;
 
-                    .cmp-model-data__button--btn {
+                    .cmp-model-data__btn--button {
                         width: 180px;
                         height: 50px;
                         border-radius: 10px;
+                        font-size: 20px;
                         border: none;
-                        background-color: darkgray;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-size: 18px;
-                        transition: all 0.5s;
+                        background-color: $gray;
                         cursor: pointer;
 
                         .cmp-button__text {
@@ -175,22 +144,23 @@
                 }
             }
 
-            .cmp-model-data__image {
-                width: 50%;
-                height: 310px;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: flex-start;
+            .cmp-model-data__img {
+                width: 100%;
+                height: 400px;
+                display: grid;
+                justify-content: start;
+                align-items: center;
+                grid-column-start: 1;
+                grid-row-start: 1;
 
                 /* This class targets a Core Component Image CSS class */
-                .cmp-model-data__image--img {
-                    width: 100%;
-                    height: 310px;
+                .cmp-model-data__img--image {
+                    width: 500px;
+                    height: 400px;
+                    margin-left: 50px;
                     object-fit: cover;
-                    margin: auto;
                 }
             }
         }
     }
-
 }

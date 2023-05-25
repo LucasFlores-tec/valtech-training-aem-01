@@ -20,7 +20,7 @@
                     <properties
                         jcr:primaryType="nt:unstructured"
                         sling:hideResource="{Boolean}false"
-                        jcr:title="Button Properties"/>
+                        jcr:title="Button"/>
                     <accessibility
                         jcr:primaryType="nt:unstructured"
                         sling:hideResource="{Boolean}true"/>
@@ -29,7 +29,7 @@
                         sling:hideResource="{Boolean}true"/>
                     <textProperties
                         jcr:primaryType="nt:unstructured"
-                        jcr:title="Text Properties"
+                        jcr:title="Properties"
                         sling:resourceType="granite/ui/components/coral/foundation/container"
                         margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
@@ -50,6 +50,42 @@
                                                 fieldLabel="Title"
                                                 name="./title"
                                                 required="{Boolean}true"/>
+                                            <defaulttypes
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Type / Size"
+                                                    name="./type">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <h1
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H1"
+                                                        value="h1"/>
+                                                    <h2
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H2"
+                                                        value="h2"/>
+                                                    <h3
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H3"
+                                                        value="h3"/>
+                                                    <h4
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H4"
+                                                        value="h4"/>
+                                                    <h5
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H5"
+                                                        value="h5"/>
+                                                    <h6
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="H6"
+                                                        value="h6"/>
+                                                    <p
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="P"
+                                                        value="p"/>
+                                                </items>
+                                            </defaulttypes>
                                             <description
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
