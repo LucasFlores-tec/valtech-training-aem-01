@@ -30,6 +30,9 @@ public class HeroModelImpl implements HeroModel {
     @ValueMapValue
     private String type;
 
+    @ValueMapValue
+    private String textIsRich;
+
     @Override
     public String getTitle() {
         return title;
@@ -53,5 +56,10 @@ public class HeroModelImpl implements HeroModel {
     @Override
     public String getType() {
         return type;
+    }
+
+    @Override
+    public String getTextIsRich() {
+        return textIsRich;
     }
 }

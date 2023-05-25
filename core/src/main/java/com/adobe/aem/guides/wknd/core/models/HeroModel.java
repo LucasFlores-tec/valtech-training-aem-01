@@ -25,5 +25,13 @@ public interface HeroModel {
      */
     String getImageReference();
 
+    /**
+     * @return the HTML Heading tag type.
+     */
     String getType();
+
+    /**
+     * @return a boolean sinalizing if the text is rich text or not.
+     */
+    String getTextIsRich();
 }

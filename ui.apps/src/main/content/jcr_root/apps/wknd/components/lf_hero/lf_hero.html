@@ -2,6 +2,7 @@
 <div data-sly-use.model="com.adobe.aem.guides.wknd.core.models.HeroModel"
      data-sly-use.button="com.adobe.cq.wcm.core.components.models.Button"
      data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.description="${model.description}"
      class="cmp-model">
 
     <!--/* Hero's title */-->
@@ -12,7 +13,9 @@
         <!--/* Hero's description and button */-->
         <div class="cmp-model-data__des-btn">
             <div class="cmp-model-data__des">
-                <p class="cmp-model-data__des--description">${model.description}</p>
+                <p class="cmp-model-data__des--description" data-sly-unwrap="${model.textIsRich}">
+                    ${ description @ context = model.textIsRich ? 'html' : 'text' }
+                </p>
             </div>
 
             <div class="cmp-model-data__btn">

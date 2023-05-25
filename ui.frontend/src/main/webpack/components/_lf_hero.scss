@@ -28,6 +28,8 @@
                 display: grid;
                 justify-items: center;
                 align-content: center;
+                overflow: auto;
+                margin-bottom: 30px;
 
                 .cmp-model-data__des--description {
                     color: $gray;
@@ -35,6 +37,7 @@
                     width: 90%;
                     height: 100%;
                     line-height: 2;
+                    overflow: auto;
                 }
             }
 
@@ -112,6 +115,8 @@
                     display: grid;
                     justify-items: center;
                     align-content: center;
+                    overflow: auto;
+                    margin-bottom: 30px;
 
                     .cmp-model-data__des--description {
                         color: $gray;
