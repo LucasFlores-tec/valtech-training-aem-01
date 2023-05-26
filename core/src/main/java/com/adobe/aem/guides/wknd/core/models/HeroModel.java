@@ -11,14 +11,19 @@ public interface HeroModel {
     String getTitle();
 
     /**
+     * @return the HTML Heading tag type.
+     */
+    String getType();
+
+    /**
      * @return a description to display as the Hero's description.
      */
     String getDescription();
 
     /**
-     * @return a link reference to the Hero's button.
+     * @return a boolean if the text is rich text or not.
      */
-    String getLinkURL();
+    String getTextIsRich();
 
     /**
      * @return the image's path reference.
@@ -26,12 +31,12 @@ public interface HeroModel {
     String getImageReference();
 
     /**
-     * @return the HTML Heading tag type.
-     */
-    String getType();
+     * @return a link reference to the Hero's button.
+            */
+    String getLinkURL();
 
     /**
-     * @return a boolean sinalizing if the text is rich text or not.
+     * @return a link reference to the Hero's button.
      */
-    String getTextIsRich();
+    String getLinkTarget();
 }

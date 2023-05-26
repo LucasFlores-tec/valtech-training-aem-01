@@ -1,13 +1,13 @@
 package com.adobe.aem.guides.wknd.core.models.impl;
 
 import com.adobe.aem.guides.wknd.core.models.HeroModel;
-import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(
-        adaptables = { SlingHttpServletRequest.class },
+        adaptables = { Resource.class },
         adapters = { HeroModel.class },
         resourceType = { HeroModelImpl.RESOURCE_TYPE },
         defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
@@ -33,6 +33,9 @@ public class HeroModelImpl implements HeroModel {
     @ValueMapValue
     private String textIsRich;
 
+    @ValueMapValue
+    private String linkTarget;
+
     @Override
     public String getTitle() {
         return title;
@@ -46,6 +49,11 @@ public class HeroModelImpl implements HeroModel {
     @Override
     public String getLinkURL() {
         return linkURL;
+    }
+
+    @Override
+    public String getLinkTarget() {
+        return linkTarget;
     }
 
     @Override
